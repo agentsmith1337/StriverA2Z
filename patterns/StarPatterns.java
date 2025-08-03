@@ -121,5 +121,110 @@ public class StarPatterns {
             System.out.println();
         }
         System.out.println();
+
+        for (int i=1, k=1;i<=5; i++) {
+            for (int j=1; j<=i; j++) {
+                System.out.print(k+++" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for (int i=0; i<5; i++) {
+            for (int j=0, c=65; j<=i; j++) {
+                System.out.print((char)c++);
+            }
+            System.out.println();
+        }
+        System.out.println(); 
+
+        for (int i=0; i<5; i++) {
+            for (int j=5, c=65; j>i; j--) {
+                System.out.print((char)c++);
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for (int i=0, c=65; i<5; i++) {
+            for (int j=0; j<=i; j++) {
+                System.out.print((char)c);
+            }
+            c++;
+            System.out.println();
+        }
+        System.out.println();
+
+        for (int i=0; i<4; i++) {
+            int c=65;
+            for (int j=i+1; j<4; j++) System.out.print(" ");
+            for (int j=0; j<=i ;j++) {
+                System.out.print((char)c++);
+            }
+            c--;
+            c--;
+            for (int j=0; j<i; j++) {
+                System.out.print((char)c--);
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for (int i=0; i<=4; i++) {
+            for (int j=0,c=69-i; j<=i; j++) {
+                System.out.print((char)(c+j)+" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for (int i=0; i<10; i++) {
+            for (int j=i; j<5&&i<5; j++) {
+                System.out.print("*");
+            }
+            for (int j=0; j<i&&i<5; j++) {
+                System.out.print("  ");
+            }
+            for (int j=i; j<5&&i<5; j++) {
+                System.out.print("*");
+            }
+
+            for (int j=0; j<(i+1)%5&&i>=5||i==9&&j<5; j++) {
+                System.out.print("*");
+            }
+            for (int j=(i%5); j<4&&i>=5; j++) {
+                System.out.print("  ");
+            }
+            for (int j=0; j<(i+1)%5&&i>=5||i==9&&j<5; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for (int i=0; i<9; i++) {
+            for (int j=0; j<=i&&i<5; j++) System.out.print("*");
+            for (int j=i; j<4&&i<5; j++) System.out.print("  ");
+            for (int j=0; j<=i&&i<5; j++) System.out.print("*");
+
+            for (int j=(i+1)%5; j<5&&i>=5; j++) System.out.print("*");
+            for (int j=0; j<=i%5&&i>=5; j++) System.out.print("  ");
+            for (int j=(i+1)%5; j<5&&i>=5; j++) System.out.print("*");
+            System.out.println();        
+        }
+        System.out.println();
+
+        for (int i=0; i<7; i++) {
+            for (int j=0; (i==0||i==6)&&j<4; j++) System.out.print("*");
+            if (i==1||i==3||i==5) System.out.println();
+            for (int j=0; (i==2||i==4)&&j<4; j++) {
+                if (j==0||j==3) System.out.print("*");
+                else System.out.print(" ");
+            }
+        }
+        System.out.println();
+
+        
     }
+    
 }

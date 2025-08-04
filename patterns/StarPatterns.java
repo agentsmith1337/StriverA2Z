@@ -222,9 +222,60 @@ public class StarPatterns {
                 else System.out.print(" ");
             }
         }
+        System.out.println();  
         System.out.println();
+        //22nd pattern as a combination of 6 triangles 
+        for (int i=0, ut=4, lt=2; i<7; i++) {
+            //upper left triangle
+            for (int j=0,a=4; j<i&&i<4; j++) {
+                System.out.print(a--+" ");
+            }
+            //upper triangle  
+            for (int j=i; j<7-i&&i<4; j++) {
+                System.out.print(ut+" ");
+            }
+            if (i<4) ut--;
+            //upper right triangle 
+            for (int j=0, a=4+1-i; j<i&&i<4; j++) {
+                System.out.print(a+++" ");
+            }
 
+            //lower left triangle
+            for (int j=1 ,a=4; j>=(i%4)&&i>=4&&i<6; j--) {
+                System.out.print(a--+" ");
+            }
+            //lower triangle
+            for (int j=0; j<3+2*(i%4)&&i>=4; j++) {
+                System.out.print(lt+" ");
+            }
+            if (i>=4) lt++;
+            //lower right triangle
+            for (int j=1, a=3+(i%4); j>=(i%4)&&i>=4&&i<6; j--) {
+                System.out.print(a+++" ");
+            }
+
+            System.out.println();
+        }
+        System.out.println();
         
+        //22nd pattern as a multiplexed array/ programmed array 
+        for (int i=0; i<7; i++)  {
+            for (int j=0; j<7; j++) {
+                if ((i==0||i==6)&&j!=0&&j!=6) {
+                System.out.print("4 ");
+                }
+                {
+                    if (j==0||j==6) System.out.print("4 ");
+                    if ((i==1||i==5)&&j>1&&j<5) System.out.print("3 ");
+                    if ((i==2||i==4)&&j>2&&j<4) System.out.print("2 ");
+                    if (i>0&&i<6&&(j==1||j==5)) System.out.print("3 ");
+                    if (i>1&&i<5&&(j==2||j==4)) System.out.print("2 ");
+                    if (i==3&&j==3)System.out.print("1 ");
+
+                }
+               
+            }
+            System.out.println();
+        }
     }
-    
 }
